@@ -6,6 +6,8 @@
 
 // Only Works For Ints ATM
 
+#include <algorithm>
+
 using namespace std;
 
 #ifndef BINARYTREEINTERFACE_H
@@ -67,14 +69,14 @@ class BinaryTreeInterface {
 
     // Actions
     bool IsLeaf() const { return (left_child == nullptr && right_child == nullptr); };
-    void updateHeight() { height = 1 + std::max(left_child->getHeight(), right_child->getHeight()); };
+    void UpdateHeight() { height = 1 + std::max(left_child->getHeight(), right_child->getHeight()); };
 
     // Member Data
     TreeNode* left_child;
     TreeNode* right_child; 
 
     int value;
-    int height
+    int height;
   };
 
  private: 
