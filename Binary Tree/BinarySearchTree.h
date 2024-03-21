@@ -13,7 +13,7 @@ class BinarySearchTree : public BinaryTreeInterface {
   BinarySearchTree();
   BinarySearchTree(const BinarySearchTree& rval);
 
-  ~BinarySearchTree();
+  virtual ~BinarySearchTree();
   
   // Getter - Setters
   int getHeight();
@@ -26,13 +26,13 @@ class BinarySearchTree : public BinaryTreeInterface {
   // Actions    
   bool IsEmpty();
 
-  bool Insert(const int& data);
+  virtual bool Insert(const int& data);
 
   void Retrieve(const int& target, int& ret) const;
 
   bool Contains(const int& target) const;
 
-  bool Remove(const int& data);
+  virtual bool Remove(const int& data);
 
   void Clear();
 
