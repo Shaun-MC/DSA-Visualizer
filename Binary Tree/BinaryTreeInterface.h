@@ -28,12 +28,12 @@ class BinaryTreeInterface {
 
   virtual int getRootData() = 0;
 
-  virtual int setRootData(const int& new_data) = 0;
+  virtual void setRootData(const int& new_data) = 0;
 
   // Actions
   virtual bool IsEmpty() = 0;
 
-  virtual bool Add(const int& data) = 0;
+  virtual bool Insert(const int& data) = 0;
 
   virtual bool Remove(const int& data) = 0;
 
@@ -79,8 +79,6 @@ class BinaryTreeInterface {
     int height;
   };
 
- private: 
-  
   TreeNode* root;
 
   int node_count;
